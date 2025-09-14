@@ -1,0 +1,18 @@
+# PyCharm
+.idea/
+__pycache__/
+
+# Python
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Django
+db.sqlite3
+/media/
+
+# OS-generated files
+.DS_Store
