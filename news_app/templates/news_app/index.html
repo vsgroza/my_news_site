@@ -10,7 +10,7 @@
     <h1>Список новостей</h1>
     {% for item in news %}
         <div>
-            <h2>{{ item.title }}</h2>
+            <a href="{% url 'view_news' news_id=item.pk %}"><h2>{{ item.title }}</h2></a>
             <p>{{ item.content }}</p>
             {% if item.photo %}
                 <img src="{{ item.photo.url }}" alt="Фото">

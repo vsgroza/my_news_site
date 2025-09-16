@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ news_item.title }}</title>
+    <link rel="stylesheet" href="{% static 'news_app/style.css' %}">
+</head>
+<body>
+    <div class="news-detail">
+        <h2>{{ news_item.title }}</h2>
+        {% if news_item.photo %}
+            <img src="{{ news_item.photo.url }}" alt="{{ news_item.title }}">
+        {% endif %}
+        <p>{{ news_item.content }}</p>
+        <p>Опубликовано: {{ news_item.created_at|date:"Y-m-d H:i:s" }}</p>
+    </div>
+    <a href="{% url 'home' %}">Вернуться на главную</a>
+</body>
+</html>
